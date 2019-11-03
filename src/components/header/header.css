@@ -1,0 +1,13 @@
+.title {
+    margin-top: 100px;
+}
+.header {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    margin-top: 25px;
+}
+
+.todo-item {
+    margin: 5px;
+}
