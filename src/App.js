@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
 
-import { Switch, Route } from 'react-router-dom'
-import TodoApp from './components/todo-app/todo-app'
-import Login from './components/login/login'
-import Register from './components/login/register'
-import ProtectedRoute from './components/protected-route'
+import { Switch, Route } from 'react-router-dom';
+import Search from './pages/search/search';
+import Position from './pages/position/position';
+import Title from './pages/titlepg/titlepg';
+
 
 function App() {
   return (
     <div className="App">
+      </Title>
       <Switch>
         <Route exact path='/' component={Search} />
         <Route path='/position' component={Position} />

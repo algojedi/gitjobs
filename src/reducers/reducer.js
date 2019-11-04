@@ -1,18 +1,14 @@
-import { TOGGLE_TODO, DELETE_TODO, ADD_TODO, CLEAR_TODOS } from "../actions/actions";
+import { SEARCH_JOBS} from "../actions/actions";
 
 
-const INITIAL_STATE = [];
+const INITIAL_STATE = { postings : [], language: '' };
 
 function mainReducer(state=INITIAL_STATE, action) {
     switch (action.type) {
-        case CLEAR_TODOS:
+        case SEARCH_JOBS:
             return INITIAL_STATE;
         
-        case ADD_TODO:
-            return [...state, { todo: action.todo, completed: false, id : action.index }];
-            
-        case DELETE_TODO:
-            return state.filter(todo => todo.id !== action.index)
+        
             
         case TOGGLE_TODO:  
             let completed;
