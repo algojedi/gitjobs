@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 const SearchHeader = () => {
     let history = useHistory();    
     return ( 
-        <div class="search-container">
+        <div className="search-container">
             <input className='user-input' type='text' />
             <button className='search-btn' 
                     onClick={() => { history.push("/position"); }}

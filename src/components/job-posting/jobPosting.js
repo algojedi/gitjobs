@@ -1,10 +1,11 @@
 import React from 'react';
 
 
-const JobPosting = (props) => {
+const JobPosting = ({jobinfo}) => {
+    console.log('props in job posting comp ', jobinfo.title);
     return ( 
         <React.Fragment>
-            {props.jobInfo}
+            {jobinfo.title}
         </React.Fragment>
      );
 }

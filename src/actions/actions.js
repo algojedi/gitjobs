@@ -5,6 +5,8 @@ export const SEARCH_JOBS = 'SEARCH_JOBS'
 
 //action creators returning actions
 export function searchJobs(lang) {
+    console.log('jobs being searched');
+    
     return {
         type: SEARCH_JOBS,
         payload: lang
