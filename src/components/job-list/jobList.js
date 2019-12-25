@@ -3,7 +3,7 @@ import JobPosting from '../job-posting/jobPosting';
 import { connect } from 'react-redux'
 
 const JobList = (props) => {
-        console.log('props are ', props);
+        // console.log('props are ', props);
         return ( 
             <div>
                 <p>job listed!</p>
