@@ -6,8 +6,8 @@ const SearchHeader = () => {
     let history = useHistory();    
     return ( 
         <div className="search-container">
-            <input className='user-input' type='text' />
-            <button className='search-btn' 
+            <input className='user-input form-control' type='text' />
+            <button className='search-btn btn btn-light' 
                     onClick={() => { history.push("/position"); }}
                     type='submit'>Search</button>
         </div>

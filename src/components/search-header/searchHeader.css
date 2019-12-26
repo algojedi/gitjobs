@@ -1,13 +1,17 @@
-.title {
-    margin-top: 100px;
-}
-.header {
-    width: 400px;
-    margin: auto;
-    display: flex;
-    margin-top: 25px;
+* {
+    box-sizing: border-box;
 }
 
-.todo-item {
-    margin: 5px;
+.search-container {
+    width: 75%;
+    margin: 25px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.user-input {
+    flex: 1 .5 250px;
+}
+.search-btn {
+
 }
