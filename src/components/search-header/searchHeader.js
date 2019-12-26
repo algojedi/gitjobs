@@ -1,22 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './searchHeader.css';
 import { useHistory } from "react-router-dom";
+import { changeLanguage, requestJobs } from '../../actions/actions'
+import { connect } from 'react-redux'
 
-const SearchHeader = () => {
+
+const SearchHeader = ({dispatch}) => {
     let history = useHistory();    
+    const [ language, setLanguage ] = useState('');
+
+    const handleChange = (e) => {
+        setLanguage(e.target.value);
+    }
     return ( 
         <div className="search-container">
-            <input className='user-input form-control' type='text' />
+            <input  className='user-input form-control'
+                    value={language} 
+                    type='text' 
+                    onChange={handleChange} />
             <button className='search-btn btn btn-light' 
-                    onClick={() => { history.push("/position"); }}
+                    onClick={() => {    dispatch(changeLanguage(language));  
+                                        dispatch(requestJobs());
+                                        console.log('dispatched job request');
+                                    }}  
                     type='submit'>Search</button>
         </div>
     );
 }
  
-export default SearchHeader;
+export default connect()(SearchHeader);
 
-
+// *************{ history.push("/position"); ************
 
 // class SearchHeader extends React.Component {
 //     constructor(props) {

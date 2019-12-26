@@ -14,7 +14,7 @@ const JobList = (props) => {
          );
 }
 
-const mapStateToProps = state => ({ postings: state.postings })
+const mapStateToProps = state => ({ postings: state.postingsReducer.postings })
 
 export default connect(mapStateToProps)(JobList);
 
