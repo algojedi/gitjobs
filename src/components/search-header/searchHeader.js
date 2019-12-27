@@ -20,8 +20,8 @@ const SearchHeader = ({dispatch}) => {
                     onChange={handleChange} />
             <button className='search-btn btn btn-light' 
                     onClick={() => {    dispatch(changeLanguage(language));  
-                                        dispatch(requestJobs());
-                                        console.log('dispatched job request');
+                                        dispatch(requestJobs(language));
+                                        //console.log('dispatched job request');
                                     }}  
                     type='submit'>Search</button>
         </div>

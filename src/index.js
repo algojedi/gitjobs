@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import { Provider } from 'react-redux';
-import { searchReducer, postingsReducer } from './reducers/reducer';
+import { searchReducer, postingsReducer, detailReducer } from './reducers/reducer';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 //import { devToolsEnhancer } from 'redux-devtools-extension';
 import { BrowserRouter } from 'react-router-dom';
@@ -13,7 +13,7 @@ import thunkMiddleware from 'redux-thunk';
 import { createLogger} from 'redux-logger';
 
 const logger = createLogger();
-const store = createStore(combineReducers({searchReducer, postingsReducer}), 
+const store = createStore(combineReducers({searchReducer, postingsReducer, detailReducer}), 
 applyMiddleware(thunkMiddleware, logger));
 
 ReactDOM.render(

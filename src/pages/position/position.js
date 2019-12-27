@@ -1,13 +1,20 @@
 import React from 'react';
 import './position.css';
+import { connect } from 'react-redux';
 
-// import { addTodo } from "../../actions/actions";
-// import { connect } from 'react-redux';
-
-const Position = () => {
+const Position = ({dispatch, details}) => {
     return ( 
-        <div>Welcome to the Position</div>
+        <div>
+            <div>Welcome to the Position</div>
+            <div>
+            {details.title}
+            </div>
+        </div>
      );
 }
  
-export default Position;
+const mapStatetoProps = (state) => {
+    return { details: state.detailReducer.details }
+}
+
+export default connect(mapStatetoProps)(Position);
